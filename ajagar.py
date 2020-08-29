@@ -15,7 +15,7 @@ eng_hindi_mapping = {
 	'del': 'हटा',
 	'True': 'सच',
 	'False': 'झूट',
-	'None': 'कुछ नहीं',
+	'None': 'अशक्त',
 	'break': 'रुक जाओ',
 	'def': 'परिभाषा',
 	'return': 'अर्थ',
@@ -26,7 +26,11 @@ eng_hindi_mapping = {
 	'add': 'डालो',
 	'extend': 'विस्तार',
 	'while': 'जब तक',
+	'hash': 'हैश',
+	'__init__': '__स्थापना__',
+	'self': 'स्वयं'
 }
+
 
 hindi_eng_mapping = {hindi: eng for eng, hindi in eng_hindi_mapping.items()}
 
@@ -45,7 +49,7 @@ def convert_to_hindi_file(input_file):
 		file_data = f.read()
 	for eng, hin in hindi_eng_mapping.items():
 		file_data = file_data.replace(eng, hin)
-	ouptut_file = input_file[:-e] + '_hindi.py'
+	ouptut_file = input_file[:-2] + '_hindi.py'
 	with open(ouptut_file, 'w') as f:
 		f.write(file_data)
 
