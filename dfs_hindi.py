@@ -1,3 +1,5 @@
+# स्रोत: https://eddmann.com/posts/depth-first-search-and-breadth-first-search-in-python/
+
 ग्राफ = {'क': संग्रह(['ख', 'ग']),
          'ख': संग्रह(['क', 'घ', 'ङ']),
          'ग': संग्रह(['क', 'च']),
